@@ -22,6 +22,10 @@ import javax.swing.SwingUtilities;
  */
 public class MainFrame extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final int WIDTH = 900;
 	private static final int HEIGHT = 600;
 	private static final int DIVIDER_POS = 11*HEIGHT/18;

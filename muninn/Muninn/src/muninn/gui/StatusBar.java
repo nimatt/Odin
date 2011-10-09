@@ -7,6 +7,10 @@ import javax.swing.JPanel;
 
 public class StatusBar extends JPanel {
 
+	/**
+	 * Serial for the component
+	 */
+	private static final long serialVersionUID = 1L;
 	private static final int HEIGHT = 20;
 	
 	public StatusBar() {
