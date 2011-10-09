@@ -24,7 +24,8 @@ public class MainFrame extends JFrame {
 
 	private static final int WIDTH = 900;
 	private static final int HEIGHT = 600;
-	private static final int DIVIDER_POS = 2*HEIGHT/3;
+	private static final int DIVIDER_POS = 11*HEIGHT/18;
+	
 	private static final int DIVIDER_SIZE = 4;
 	private static final String FRAME_TITLE = "Muninn";
 
