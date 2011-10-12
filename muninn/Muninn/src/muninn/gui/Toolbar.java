@@ -2,8 +2,14 @@ package muninn.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
+import javax.swing.BoxLayout;
 import javax.swing.JToolBar;
+import javax.swing.border.BevelBorder;
 
 public class Toolbar extends JToolBar {
 	
@@ -11,11 +17,53 @@ public class Toolbar extends JToolBar {
 	 * Serial for the component
 	 */
 	private static final long serialVersionUID = 1L;
-	private static final int WIDTH = 50;
+	private static final int WIDTH = 40;
 	
 	public Toolbar() {
-		this.setFloatable(false);
-		this.setBackground(new Color(143, 171, 255));
-		this.setPreferredSize(new Dimension(WIDTH,0));
+		setFloatable(false);
+		setBackground(new Color(220, 220, 220));
+		setPreferredSize(new Dimension(WIDTH,0));
+		setBorder(new BevelBorder(BevelBorder.LOWERED));
+		setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+		
+		File f = new File("./");
+		System.out.println(f.getAbsolutePath());
+		
+		Image image = null;
+		
+		try {
+			image = ImageIO.read(new File("images/tmpIcon.png"));
+		} catch (IOException e) {
+			// TODO: Do something fun...
+			e.printStackTrace();
+		}
+		
+		ToolBarButton tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
+		tbb = new ToolBarButton(this, image);
+		tbb.setMaximumSize(new Dimension(WIDTH, WIDTH));
+		add(tbb);
 	}
 }
